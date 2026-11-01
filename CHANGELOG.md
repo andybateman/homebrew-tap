@@ -1,5 +1,9 @@
 # Changelog - andybateman/tap
 
+## [2026-11-02]
+
+- Added `Formula/termlogo.rb`, moved from the termlogo repo's own tap so there is one tap. Formula bumps are manual.
+
 ## [2026-10-21] - Tap created
 
 - Casks for SolidCraft 0.18.2 (app and `solidcraft-cli`) and iOpenPod 2.0.14.

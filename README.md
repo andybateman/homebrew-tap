@@ -1,13 +1,13 @@
 # andybateman/tap
 
 <!-- Project metadata: read by the project tools, hidden when the README is rendered.
-**Keywords:** Homebrew, tap, cask, SolidCraft, iOpenPod, GitHub releases, GitHub Actions, auto-bump, livecheck, quarantine, Gatekeeper, macOS, MacBook setup, Brewfile
+**Keywords:** Homebrew, tap, cask, formula, termlogo, SolidCraft, iOpenPod, GitHub releases, GitHub Actions, auto-bump, livecheck, quarantine, Gatekeeper, macOS, MacBook setup, Brewfile
 **Status:** Active
 **Start Date:** 2026-10-21
-**Last Updated:** 2026-10-21
+**Last Updated:** 2026-11-02
 -->
 
-Personal Homebrew tap for Mac apps that publish GitHub releases but have no official cask.
+Personal Homebrew tap: Mac apps that publish GitHub releases but have no official cask, plus Andy's own `termlogo` formula.
 
 ```bash
 brew tap andybateman/tap
@@ -23,6 +23,16 @@ brew install --cask andybateman/tap/solidcraft
 
 Both upstream builds are ad-hoc signed and not notarised, so each cask clears the
 `com.apple.quarantine` flag in `postflight`. Only add apps you trust on that basis.
+
+## Formulae
+
+| Formula | What | Notes |
+|---|---|---|
+| `termlogo` | Logo interpreter with turtle graphics for the terminal, [andybateman/termlogo](https://github.com/andybateman/termlogo) | Installed from the release tarball; bump the `url` and `sha256` by hand on each termlogo release (the bump workflow handles casks only). Moved here from the termlogo repo's own tap on 2026-11-02. |
+
+```bash
+brew install andybateman/tap/termlogo
+```
 
 ## Keeping casks current
 
