@@ -11,7 +11,7 @@ class Termlogo < Formula
     libexec.install "termlogo"
     (bin/"termlogo").write <<~SH
       #!/bin/sh
-      PYTHONPATH="#{libexec}" exec "#{Formula["python@3.13"].opt_bin}/python3.13" -m termlogo "$@"
+      PYTHONPATH="#{libexec}" exec "#{formula_opt_bin("python@3.13")}/python3.13" -m termlogo "$@"
     SH
   end
 
