@@ -1,9 +1,9 @@
 cask "iopenpod" do
   arch arm: "arm64", intel: "x86_64"
 
-  version "2.1.0"
-  sha256 arm:   "3521132fb84dc17b354fe77c9784223fe1a69a412edb520477f2f1b55f524a1f",
-         intel: "6edf60582e34983ed05558a71f4ebd8c30e3872ef2c5cd7133853626fcd5e4b0"
+  version "2.1.1"
+  sha256 arm:   "fc916d96641ca4b9eddfc850cf1a3347bd243ddce7c978c2203edd4daaa6fbaf",
+         intel: "6313c2e56bd8f7a7a869f9ff91baa010cb5f745320f11e5965fc7aae10ef4643"
 
   url "https://github.com/TheRealSavi/iOpenPod/releases/download/v#{version}/iOpenPod-#{version}-macOS-#{arch}.dmg"
   name "iOpenPod"
