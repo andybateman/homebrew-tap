@@ -34,6 +34,22 @@ Both upstream builds are ad-hoc signed and not notarised, so each cask clears th
 brew install andybateman/tap/termlogo
 ```
 
+## Formulae
+
+| Formula | Tool | Upstream | Notes |
+|---|---|---|---|
+| `termlogo` | Logo interpreter with turtle graphics for the terminal (`termlogo` on PATH) | [andybateman/termlogo](https://github.com/andybateman/termlogo) | Python 3.13 tool, MIT; the formula's version is 1.2.0 |
+
+```bash
+brew tap andybateman/tap
+brew install andybateman/tap/termlogo
+termlogo --version
+```
+
+`Formula/termlogo.rb` installs the Python package into `libexec` and writes a small `bin/termlogo` wrapper that runs it with Homebrew's `python@3.13`, so the only dependency is `python@3.13`. The formula builds from the tag archive `v1.2.0.tar.gz` with a pinned SHA-256, and its test runs `termlogo --version`. It moved here from the old tap inside the termlogo repo.
+
+The formula is not covered by the scheduled bump, which handles casks only. For a new termlogo release, edit `url` and `sha256` by hand (`curl -sL <tag archive> | shasum -a 256`), update the test's expected version string, then run `brew style Formula/termlogo.rb && brew audit --strict andybateman/tap/termlogo`.
+
 ## Keeping casks current
 
 `.github/workflows/bump.yml` runs every six hours (and on demand from the Actions tab). It runs
